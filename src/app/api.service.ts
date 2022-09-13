@@ -7,12 +7,12 @@ import {
 } from '@angular/common/http';
 import { catchError, tap, map } from 'rxjs/operators';
 import { Article } from './article';
-
+import { environment } from './../environments/environment';
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
 };
-const apiUrl = 'http://localhost:3000/article';
-
+// const apiUrl = 'http://localhost:3000/article';
+const apiURL = `${environment.apiURL}/article`;
 @Injectable({
   providedIn: 'root',
 })
@@ -27,14 +27,14 @@ export class ApiService {
   }
 
   getArticles(): Observable<Article[]> {
-    return this.http.get<Article[]>(apiUrl).pipe(
+    return this.http.get<Article[]>(apiURL).pipe(
       tap((article) => console.log('fetched articles')),
       catchError(this.handleError('getArticles', []))
     );
   }
 
   getArticle(id: number): Observable<Article> {
-    const url = `${apiUrl}/${id}`;
+    const url = `${apiURL}/${id}`;
     return this.http.get<Article>(url).pipe(
       tap((_) => console.log(`fetched article id=${id}`)),
       catchError(this.handleError<Article>(`getArticle id=${id}`))
@@ -42,14 +42,14 @@ export class ApiService {
   }
 
   addArticle(article: Article): Observable<Article> {
-    return this.http.post<Article>(apiUrl, article, httpOptions).pipe(
+    return this.http.post<Article>(apiURL, article, httpOptions).pipe(
       tap((art: Article) => console.log(`added article w/ id=${art._id}`)),
       catchError(this.handleError<Article>('addArticle'))
     );
   }
 
   updateArticle(id: any, article: Article): Observable<any> {
-    const url = `${apiUrl}/${id}`;
+    const url = `${apiURL}/${id}`;
     return this.http.put(url, article, httpOptions).pipe(
       tap((_) => console.log(`updated article id=${id}`)),
       catchError(this.handleError<any>('updateArticle'))
@@ -57,7 +57,7 @@ export class ApiService {
   }
 
   deleteArticle(id: any): Observable<Article> {
-    const url = `${apiUrl}/${id}`;
+    const url = `${apiURL}/${id}`;
     return this.http.delete<Article>(url, httpOptions).pipe(
       tap(_ => console.log(`deleted article id=${id}`)),
       catchError(this.handleError<Article>('deleteArticle'))
