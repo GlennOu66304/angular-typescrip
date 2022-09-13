@@ -1,4 +1,7 @@
-MANT  Stack([MongoDB Angular NestJS TypeScript](https://morioh.com/p/ffa5a649384f))
+# MANT  Stack([MongoDB Angular NestJS TypeScript](https://morioh.com/p/ffa5a649384f))
+
+## Vercel Deploy
+[How to Deploy an Angular Site with Vercel](https://vercel.com/guides/deploying-angular-with-vercel)
 
 ## [Front End build](https://github.com/GlennOu66304/angular-typescrip/blob/main/README2.md)
 [How to Use Environment Variable in Angular?](https://www.itsolutionstuff.com/post/how-to-use-environment-variable-in-angularexample.html)  
