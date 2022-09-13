@@ -1,10 +1,11 @@
 MANT  Stack([MongoDB Angular NestJS TypeScript](https://morioh.com/p/ffa5a649384f))
 
-## [Front End build]()
-[How to Use Environment Variable in Angular?](https://www.itsolutionstuff.com/post/how-to-use-environment-variable-in-angularexample.html)
-[Angular - ng: command not found](https://stackoverflow.com/questions/46623571/angular-ng-command-not-found)
+## [Front End build](https://github.com/GlennOu66304/angular-typescrip/blob/main/README2.md)
+[How to Use Environment Variable in Angular?](https://www.itsolutionstuff.com/post/how-to-use-environment-variable-in-angularexample.html)  
+[Angular - ng: command not found](https://stackoverflow.com/questions/46623571/angular-ng-command-not-found)   
 
-## [API](https://github.com/GlennOu66304/nest-typescript-mongodb-api)
+## [API](https://github.com/GlennOu66304/nest-typescript-mongodb-api)    
+
 ## BackEnd:
 
 1.Tech Stack:
