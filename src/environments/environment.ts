@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiURL: 'https://nest-typescript-mongodb.herokuapp.com'
+  apiURL: 'https://nest-typescript-mongodb-api2.onrender.com'
 };
 
 /*
